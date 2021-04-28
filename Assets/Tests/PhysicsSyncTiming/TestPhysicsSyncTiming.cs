@@ -57,7 +57,7 @@ public class TestPhysicsSyncTiming
     }
 
     [UnityTest]
-    public IEnumerator Raycast_ColliderDoesNotMovesAfterPositionChanged()
+    public IEnumerator Raycast_ColliderDoesNotMoveAfterPositionChanged()
     {
         yield return null;
 
@@ -76,7 +76,7 @@ public class TestPhysicsSyncTiming
     }
 
     [UnityTest]
-    public IEnumerator Raycast_ColliderDoesNotMovesAfterPositionChanged_AsTrigger()
+    public IEnumerator Raycast_ColliderDoesNotMoveAfterPositionChanged_AsTrigger()
     {
         yield return null;
 
@@ -214,6 +214,96 @@ public class TestPhysicsSyncTiming
         _builder.VerifyRaycastCollided(origin: Vector3.zero, direction: Vector3.back);
     }
 
+    [UnityTest]
+    public IEnumerator Raycast_ColliderDoesNotMoveIfGameObjectIsDisabled()
+    {
+        yield return null;
+
+        // setup
+        _builder
+            .WhenColliderPositionIs(CollidedPosition)
+            .WhenColliderObjectActiveIs(false)
+            .Build();
+        yield return new WaitForFixedUpdate();
+
+        // when
+        _builder.WhenColliderPositionIs(NotCollidedPosition);
+        Physics.SyncTransforms();
+
+        _builder.WhenColliderObjectActiveIs(true);
+
+        // then
+        _builder.VerifyRaycastDoesNotCollided(origin: Vector3.zero, direction: Vector3.forward);
+    }
+
+    [UnityTest]
+    public IEnumerator Raycast_ColliderDoesNotMoveIfGameObjectIsDisabled_AsTrigger()
+    {
+        yield return null;
+
+        // setup
+        _builder
+            .WhenColliderPositionIs(CollidedPosition)
+            .WhenColliderObjectActiveIs(false)
+            .WhenColliderTriggerAs(true)
+            .Build();
+        yield return new WaitForFixedUpdate();
+
+        // when
+        _builder.WhenColliderPositionIs(NotCollidedPosition);
+        Physics.SyncTransforms();
+
+        _builder.WhenColliderObjectActiveIs(true);
+
+        // then
+        _builder.VerifyRaycastDoesNotCollided(origin: Vector3.zero, direction: Vector3.forward);
+    }
+
+    [UnityTest]
+    public IEnumerator Raycast_ColliderDoesNotMoveIfColliderEnabledIsFalse()
+    {
+        yield return null;
+
+        // setup
+        _builder
+            .WhenColliderPositionIs(CollidedPosition)
+            .WhenColliderComponentEnabledIs(false)
+            .Build();
+        yield return new WaitForFixedUpdate();
+
+        // when
+        _builder.WhenColliderPositionIs(NotCollidedPosition);
+        Physics.SyncTransforms();
+
+        _builder.WhenColliderComponentEnabledIs(true);
+
+        // then
+        _builder.VerifyRaycastDoesNotCollided(origin: Vector3.zero, direction: Vector3.forward);
+    }
+
+    [UnityTest]
+    public IEnumerator Raycast_ColliderDoesNotMoveIfColliderEnabledIsFalse_AsTrigger()
+    {
+        yield return null;
+
+        // setup
+        _builder
+            .WhenColliderPositionIs(CollidedPosition)
+            .WhenColliderComponentEnabledIs(false)
+            .WhenColliderTriggerAs(true)
+            .Build();
+        yield return new WaitForFixedUpdate();
+
+        // when
+        _builder.WhenColliderPositionIs(NotCollidedPosition);
+        Physics.SyncTransforms();
+
+        _builder.WhenColliderComponentEnabledIs(true);
+
+        // then
+        _builder.VerifyRaycastDoesNotCollided(origin: Vector3.zero, direction: Vector3.forward);
+    }
+
     public class Builder : IDisposable
     {
         public BoxCollider TargetCollider { get; }
@@ -244,6 +334,18 @@ public class TestPhysicsSyncTiming
         public Builder WhenColliderTriggerAs(bool isTrigger)
         {
             TargetCollider.isTrigger = isTrigger;
+            return this;
+        }
+
+        public Builder WhenColliderComponentEnabledIs(bool value)
+        {
+            TargetCollider.enabled = value;
+            return this;
+        }
+
+        public Builder WhenColliderObjectActiveIs(bool value)
+        {
+            TargetCollider.gameObject.SetActive(value);
             return this;
         }
 
