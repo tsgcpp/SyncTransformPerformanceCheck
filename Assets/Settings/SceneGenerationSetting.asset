@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81cffda8de17aaa4fbe1ad1287da40b8, type: 3}
+  m_Name: SceneGenerationSetting
+  m_EditorClassIdentifier: 
+  m_baseScene: {fileID: 102900000, guid: b3440f8e8512c5647990dc3850d8f714, type: 3}
+  m_sceneFolderPath: Assets/Scenes/PerformanceCheck
+  m_playerPrefab: {fileID: 3694776315408325921, guid: 6f5b64e64ea2cd049b586103906c8ab2, type: 3}
+  m_physicsSynchronizerPrefab: {fileID: 6065408946724073133, guid: 0d875f739f23eee439aa6be028d03e73, type: 3}
+  m_targetPrefabs:
+  - {fileID: 2506959194444243121, guid: f766c5445ee9a2b43b004fb8dd1e39bc, type: 3}
+  - {fileID: 3611486261453519860, guid: 397534eadfc434d409704eccba5ba57d, type: 3}
+  - {fileID: 4137190088367325219, guid: 53926bfdb6bafde4aa6f5e2dc7d5492f, type: 3}
+  - {fileID: 4137190088367325219, guid: d574e2f5ffb2775419322e1270853562, type: 3}
+  - {fileID: 4898529164790650222, guid: bc4e449ccb04cfb4d8e09c1688f37cd0, type: 3}
+  - {fileID: 2164777523081059127, guid: 25ef023323b8bf14cad97ad6285684e6, type: 3}
+  - {fileID: 6016729363930027665, guid: 82fe07b691fada34aac8a62516437515, type: 3}
+  - {fileID: 6016729363930027665, guid: 514651acc9ebdb440bb9f0e5c3f3f256, type: 3}
+  - {fileID: 6139896255952801476, guid: 759e4d257a585bc42a8695bebd15fcdc, type: 3}
+  - {fileID: 1530994448215711844, guid: 93299f1ae26e3464b8bf4420e559805d, type: 3}
+  - {fileID: 8257263280784340542, guid: 37e4f04f98a662c4280fcdd82f3dc857, type: 3}
