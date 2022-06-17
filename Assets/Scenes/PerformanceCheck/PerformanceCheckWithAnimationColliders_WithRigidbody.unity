@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _colliderRoot: {fileID: 1182461680}
   _prefab: {fileID: 7428499499882366777, guid: bd269e4add4109e4dbb784b0f4b8b2ab, type: 3}
-  _prefabCount: {x: 40, y: 40, z: 40}
+  _prefabCount: {x: 16, y: 16, z: 16}
   _localMargin: {x: 1, y: 1, z: 1}
 --- !u!95 &126420142
 Animator:
