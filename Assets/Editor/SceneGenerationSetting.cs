@@ -5,18 +5,21 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SceneGenerationSetting", menuName = "ScriptableObjects/SceneGenerationSetting", order = 1)]
 public sealed class SceneGenerationSetting : ScriptableObject
 {
-    [SerializeField] private SceneAsset m_baseScene;
-    public SceneAsset BaseScene => m_baseScene;
+    [SerializeField] private SceneAsset _baseScene;
+    public SceneAsset BaseScene => _baseScene;
 
-    [SerializeField] private string m_sceneFolderPath;
-    public string SceneFolderPath => m_sceneFolderPath;
+    [SerializeField] private string _sceneFolderPath;
+    public string SceneFolderPath => _sceneFolderPath;
 
-    [SerializeField] private GameObject m_playerPrefab;
-    public GameObject PlayerPrefab => m_playerPrefab;
+    [SerializeField] private GameObject _playerPrefab;
+    public GameObject PlayerPrefab => _playerPrefab;
 
-    [SerializeField] private GameObject m_physicsSynchronizerPrefab;
-    public GameObject PhysicsSynchronizerPrefab => m_physicsSynchronizerPrefab;
+    [SerializeField] private GameObject _physicsSynchronizerPrefab;
+    public GameObject PhysicsSynchronizerPrefab => _physicsSynchronizerPrefab;
 
-    [SerializeField] private List<GameObject> m_targetPrefabs;
-    public IReadOnlyList<GameObject> TargetPrefabs => m_targetPrefabs;
+    [SerializeField] private List<GameObject> _targetPrefabs;
+    public IReadOnlyList<GameObject> TargetPrefabs => _targetPrefabs;
+
+    [SerializeField] private List<GameObject> _colliderPrefabs;
+    public IReadOnlyList<GameObject> ColliderPrefabs => _colliderPrefabs;
 }

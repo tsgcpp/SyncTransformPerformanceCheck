@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
@@ -26,23 +27,47 @@ public sealed class SceneGenerationSettingEditor : Editor
 
         foreach (var targetPrefab in setting.TargetPrefabs)
         {
-            var scene = GeneratePerformanceCheckScene(
+            GenerateScene(
                 baseScenePath: baseScenePath,
+                sceneFolderPath: setting.SceneFolderPath,
                 playerPrefab: setting.PlayerPrefab,
-                targetPrefab: targetPrefab);
-            var sceneName = CreatePerformanceCheckSceneName(targetPrefab);
-            SaveScene(scene, sceneName, setting.SceneFolderPath);
+                targetPrefab: targetPrefab,
+                colliderPrefabs: setting.ColliderPrefabs);
         }
 
         foreach (var targetPrefab in setting.TargetPrefabs)
         {
-            var scene = GeneratePerformanceCheckScene(
+            GenerateScene(
                 baseScenePath: baseScenePath,
+                sceneFolderPath: setting.SceneFolderPath,
                 playerPrefab: setting.PlayerPrefab,
                 targetPrefab: targetPrefab,
+                colliderPrefabs: setting.ColliderPrefabs,
                 physicsSynchronizerPrefab: setting.PhysicsSynchronizerPrefab);
-            var sceneName = CreatePerformanceCheckSceneName(targetPrefab, setting.PhysicsSynchronizerPrefab);
-            SaveScene(scene, sceneName, setting.SceneFolderPath);
+        }
+    }
+
+    private void GenerateScene(
+        string baseScenePath,
+        string sceneFolderPath,
+        GameObject playerPrefab,
+        GameObject targetPrefab,
+        IReadOnlyList<GameObject> colliderPrefabs,
+        GameObject physicsSynchronizerPrefab = null)
+    {
+        foreach (var colliderPrefab in colliderPrefabs)
+        {
+            var scene = GeneratePerformanceCheckScene(
+                baseScenePath: baseScenePath,
+                playerPrefab: playerPrefab,
+                targetPrefab: targetPrefab,
+                colliderPrefab: colliderPrefab,
+                physicsSynchronizerPrefab: physicsSynchronizerPrefab);
+            var sceneName = CreatePerformanceCheckSceneName(
+                targetPrefab: targetPrefab,
+                colliderPrefab: colliderPrefab,
+                physicsSynchronizerPrefab: physicsSynchronizerPrefab);
+            SaveScene(scene, sceneName, sceneFolderPath);
         }
     }
 
@@ -50,6 +75,7 @@ public sealed class SceneGenerationSettingEditor : Editor
         string baseScenePath,
         GameObject playerPrefab,
         GameObject targetPrefab,
+        GameObject colliderPrefab,
         GameObject physicsSynchronizerPrefab = null)
     {
         EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
@@ -61,7 +87,11 @@ public sealed class SceneGenerationSettingEditor : Editor
         }
 
         PrefabUtility.InstantiatePrefab(playerPrefab);
-        PrefabUtility.InstantiatePrefab(targetPrefab);
+        var instantiatedTargetPrefab = PrefabUtility.InstantiatePrefab(targetPrefab) as GameObject;
+
+        var prefabInstantiatorSO = new SerializedObject(instantiatedTargetPrefab.GetComponent<PrefabInstantiator>());
+        prefabInstantiatorSO.FindProperty("_prefab").objectReferenceValue = colliderPrefab;
+        prefabInstantiatorSO.ApplyModifiedPropertiesWithoutUndo();
 
         return scene;
     }
@@ -73,13 +103,14 @@ public sealed class SceneGenerationSettingEditor : Editor
 
     public static string CreatePerformanceCheckSceneName(
         GameObject targetPrefab,
+        GameObject colliderPrefab,
         GameObject physicsSynchronizerPrefab = null)
     {
-        string name = $"PerformanceCheck_{targetPrefab.name}";
+        string name = $"PerformanceCheck_{targetPrefab.name}_{colliderPrefab.name}";
 
         if (physicsSynchronizerPrefab)
         {
-            name += "_" + physicsSynchronizerPrefab.name;
+            name += $"_{physicsSynchronizerPrefab.name}";
         }
 
         return name;
