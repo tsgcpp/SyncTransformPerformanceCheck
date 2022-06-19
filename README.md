@@ -15,4 +15,5 @@ An example of performance checks for `Physics.SyncTransforms` in Unity
 - Click `Generate Performance Check Scenes` in the inspector
 
 ## Known Issues
-- `Run All Test (Android)` can't be used in Unity 2021.3.4f1
+- ~~`Run All Test (Android)` can't be used in Unity 2021.3.4f1~~
+  - Available with `com.unity.test-framework 2.0.1-pre.18`
