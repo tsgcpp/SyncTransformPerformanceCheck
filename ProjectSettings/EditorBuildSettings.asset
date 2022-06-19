@@ -6,8 +6,201 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PerformanceCheckPlayerOnly.unity
-    guid: 10a4faf977eaec045860bc4276577d58
+    path: Assets/Scenes/Empty.unity
+    guid: 34faca1fcb0cffb4896d00ab7a492ff8
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box.unity
+    guid: 60590b0e5f32c36478c43fab1b3116e9
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_DisabledCollider.unity
+    guid: 7b7cbae74be564a46a090f1868452c41
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 127cafc0b06b94b49b023b17a690ba3a
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger.unity
+    guid: 7cff339c27bc0da4ea92bdab15086f48
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_DisabledCollider.unity
+    guid: a4e5cfbf1849e094db9613998e04eb4f
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_DisabledCollider_PhysicsSynchronizer.unity
+    guid: e6412734716c39c44b75cd200a81d774
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_PhysicsSynchronizer.unity
+    guid: 93ce6f6e310477e4fb8a1f157b0690c3
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_Rigidbody.unity
+    guid: 65e2f6920bd8978498756b5f4c073104
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_Rigidbody_DisabledCollider.unity
+    guid: b73dd2aa8069c7948a2d7c22e41d2c94
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: afe6bcf859bd11442adb514b1440f642
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_IsTrigger_Rigidbody_PhysicsSynchronizer.unity
+    guid: 993f0261a03866d40a26dfc869df61c5
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_PhysicsSynchronizer.unity
+    guid: 47790a0f4e520814f8e18a2e6eac0bfc
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_Rigidbody.unity
+    guid: 2324ca54244995b419ece284da472cd6
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_Rigidbody_DisabledCollider.unity
+    guid: f0d98617ea908b447a9915cce3b224f2
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 167ba00c6627e8a4a80804517f0c24b6
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_Box_Rigidbody_PhysicsSynchronizer.unity
+    guid: 1f637716fbc84bc4581958d0538a0181
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box.unity
+    guid: e807c3d8d9c4fa442903cbce5addd13f
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_DisabledCollider.unity
+    guid: cc7edb4145069914f9ab4d48cc19bed0
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_DisabledCollider_PhysicsSynchronizer.unity
+    guid: df9a9c3fba7b227469c33d1fc1f00119
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger.unity
+    guid: 7b1194796fb8dd74ba94d1c101bffaf5
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_DisabledCollider.unity
+    guid: cf817e8c428eb92439ca1f931bd328dc
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 117f968a1d40bd44794a4ab55b88ccfe
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_PhysicsSynchronizer.unity
+    guid: 37a3b6eae3e8d6b4db563d29286ded2d
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody.unity
+    guid: 9433a37a4abcb2845951a3c435a1be46
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_DisabledCollider.unity
+    guid: 81a08fb78907a6f45a3fa41add13dafa
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 83abe0cd4eec95942a2003bd41ec3f8c
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_PhysicsSynchronizer.unity
+    guid: c04be6d7df0a8e14b8021414feb50172
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_PhysicsSynchronizer.unity
+    guid: 4c3cc522f89fd5748aa5799862ff8316
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_Rigidbody.unity
+    guid: 3b8de77067e0266479859bae5c474e1c
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_Rigidbody_DisabledCollider.unity
+    guid: b2e7b244cdc6e0c4faf444b9051baaa5
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 3fe3e421431151743af28304a5310a24
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RemovedCapsuleCollider_Box_Rigidbody_PhysicsSynchronizer.unity
+    guid: 950e7eee6a698b248b4b9153ff8cd582
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box.unity
+    guid: e037cf9e119f0954bb039c76d939c06f
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_DisabledCollider.unity
+    guid: b01fdc40100fc834ba26ccaa6b6de153
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_DisabledCollider_PhysicsSynchronizer.unity
+    guid: bfc112cd2ff54ed43bf5d286fbbdc727
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger.unity
+    guid: 97c250e8feec8074eb356b8f6024fe8a
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_DisabledCollider.unity
+    guid: 310a16dd4b70e2249b83a6ced829b1ef
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 5c1639a3af4fec141b53e8440cb483eb
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_PhysicsSynchronizer.unity
+    guid: 44c2524b738b0ea4ab0b5af65cbeaf2a
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_Rigidbody.unity
+    guid: 6012f2757fe9b7e48870a5b33ee540c2
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_Rigidbody_DisabledCollider.unity
+    guid: 6e4575d237cf41a48bbab13261aaf73b
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: cb2c8685ba70d6c4abb00cfb9493e1a1
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_IsTrigger_Rigidbody_PhysicsSynchronizer.unity
+    guid: 86e3ef1c14fc08946a8cc50636158765
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_PhysicsSynchronizer.unity
+    guid: e8ddb67fe7957ee48a05151224c610f3
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_Rigidbody.unity
+    guid: 4734aed980a678c468e2be22a0740a93
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_Rigidbody_DisabledCollider.unity
+    guid: a34d12fb4b0c9334a9d082706f31ff10
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 801036bed63f41b4dbab47714beccb69
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_Box_Rigidbody_PhysicsSynchronizer.unity
+    guid: 1af479427879a864c857f0f84d3206a8
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box.unity
+    guid: e811a4f04d808244ab982fd8af0b9e30
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_DisabledCollider.unity
+    guid: 5dcdda120d39305488bbcd6c271919fd
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 2bf3f7a73a561e94ea168b27ee805b2f
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger.unity
+    guid: 4a215afa1cfad0243ab16bce40c05f62
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_DisabledCollider.unity
+    guid: 307ea0063e2653b4083d709eab71cbad
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 4ed5380dffd2d3947b018a1375be09eb
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_PhysicsSynchronizer.unity
+    guid: bca25fd46a54b1648bff0e3804c8a088
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody.unity
+    guid: f148a555e5e4cf6419bf2aa7684bed6b
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_DisabledCollider.unity
+    guid: 19e2bca46b2e8664b9317ba123d0e51d
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: e707defe187db8f4694074a4139923dc
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_IsTrigger_Rigidbody_PhysicsSynchronizer.unity
+    guid: 5ab4bb5db9770ba4b9515f88a028af91
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_PhysicsSynchronizer.unity
+    guid: 7c17b434d8f9515408d78f72d887d8e5
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_Rigidbody.unity
+    guid: 1ef86b5e37bbf3440835354a75e3f5c1
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_Rigidbody_DisabledCollider.unity
+    guid: 8428e344f515f7e449c7921e2f50beeb
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_Rigidbody_DisabledCollider_PhysicsSynchronizer.unity
+    guid: 87f88be69f9f1d947b31ca1e70c13652
+  - enabled: 1
+    path: Assets/Scenes/PerformanceCheck/PerformanceCheck_AnimationColliders_RootRigidbody_RemovedCapsuleCollider_Box_Rigidbody_PhysicsSynchronizer.unity
+    guid: 3c8e137d39dc0b140909243e8afe61e6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 313ad9d674c96b449b49186f39fb89fb, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3eb3a8fd45f252740b4494e18cb1c38f, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 727890fb522523b4987be5ac175a5f5b, type: 2}
