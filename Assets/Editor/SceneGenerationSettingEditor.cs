@@ -45,6 +45,8 @@ public sealed class SceneGenerationSettingEditor : Editor
                 colliderPrefabs: setting.ColliderPrefabs,
                 physicsSynchronizerPrefab: setting.PhysicsSynchronizerPrefab);
         }
+
+        EditorSceneManager.NewScene(NewSceneSetup.EmptyScene);
     }
 
     private void GenerateScene(
